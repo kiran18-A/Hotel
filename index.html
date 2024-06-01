@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.0">
+  <link rel="stylesheet" href="hotel.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Hotel</title>
+</head>
+<body>
+  <div class="nav">
+    <div class="center">
+      <p class="logo">THE HOTEL</p>
+    </div>
+    <div class="search">
+      <form id="search" class="border">
+        <input id="search-input" type="text" placeholder="search for hotel" name="search" style="height: 30px;">
+        <button id="search2" type="submit"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+    <div id="tnav">
+      <ul class="tnav">
+        <a class="nav-text" href="index.html">Home</a>
+        <a class="nav-text" href="menu.html">Menu</a>
+        <a class="nav-text" href="/Portfolio/index.html">About us</a>
+        <a class="nav-text" href="feedback.html">Feedback</a>
+        <a class="nav-text" href="bill.html">Billing</a>
+      </ul>
+   </div>
+  </div>
+  
+  <hr>
+  <div class="menu">
+ </div>
+      <br>
+      <div class="slideshow-container">
+
+
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <a class="next"onclick="plusSlides(1)"><img src="https://th.bing.com/th/id/OIP.ABqXFuAsE0hP1jEjf1dGBAHaFj?pid=ImgDet&w=3328&h=2496&rs=1" style="width:100%; height: 400px;"></a>
+          <div class="text"></div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <a class="next" onclick="plusSlides(1)"></a><img src="https://i.travelapi.com/hotels/4000000/3680000/3675100/3675078/36ff5268_z.jpg" style="width:100%; height: 400px;"></a>
+          <div class="text"></div>
+        </div>        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+        </script>
+   </div>
+   <hr>
+  <div class="menu-IceCream">
+    <h5 class="menu-name">ICE CREAM</h5>
+    <div class="Vanilla">
+      <a href="#"><img src="vicecream.jpg" height="200px" width="450px">
+      <br>
+      vanilla 15rs</a>
+    </div>
+    <div class="Chocolate">
+      <a href="#"><img src="cicecream.jpg" height="200px" width="450px">
+        <br>
+        Chocolate 15rs</a>
+    </div>
+    <div class="Strawberry">
+      <a href="#"><img src="siceream.jpg" height="200px" width="450px"><br> Strawberry 15rs</a>
+    </div>
+  </div>
+  <hr>
+  <div class="menu-IceCream">
+    <h5 class="menu-name">VEG</h5>
+    <div class="Vanilla">
+      <a href="#"><img src="mixveg.jpg" height="200px" width="350px">
+      <br>
+      Mix Veg 120rs</a>
+    </div>
+    <div class="Chocolate">
+      <a href="#"><img src="chhole.jpg" height="200px" width="350px">
+        <br>
+        Chhole 115rs</a>
+    </div>
+    <div class="Strawberry">
+      <a href="#"><img src="paneerb.jpg" height="200px" width="385px"><br> Paneer Bhurji 150rs</a>
+    </div>
+    <div class="Strawberry">
+      <a href="#"><img src="Pavbhaji.jpg" height="200px" width="350px"><br> Pav Bhaji 100rs</a>
+    </div>
+    <div class="more">
+      <a href="menu.html">More...</a>
+    </div>
+  </div>
+  <hr>
+    <h6 class="center2">Contact us<< Phone number
+      <a href="tel:9766148444">97661484444</a><< email
+        <a href="mailto:kiranaglawe18@gmail.com">kiranaglawe18@gmail.com</a>
+    </h6>
+</body>
+</html>

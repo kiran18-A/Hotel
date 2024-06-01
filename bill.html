@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="hotel.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Bill</title>
+</head>
+<body>
+   <h1 class="center2">The hotel</h1>
+  <hr>
+   <h3 class="center2">Bill</h3>
+   <form>
+    Name<input type="text">
+    <br>
+    Phone<input type="number" maxlength="10" minlength="10">
+    <hr>
+    <table>
+     <script>
+         var productp=[15,15,15,120,115,150,100,90,90,80,85,100,40,300,120,200,100];
+         var productn=["Vanilla","Chocolate","Strawberry","Mix veg","Chhole","Paneer Bhurji","Pav Bhaji","Dal Fry","Kadhi","Jeera Rice","Brown Rice	","Sambhar","Idli","Butter chiken","Chiken fry","Chiken Kadhi","Bangada fry"];
+         var buyed=0;
+         document.write("<tr><th>Product Type</th><th>Product name</th><th>price</th></tr>");
+         do
+         {
+          var j=prompt("enter + to add new and = to stop");
+          var eproductn=prompt("Available :1.Vanilla 2.Chocolate 3.Strawberry \n4.Mix veg 5.Chhole 6.Paneer Bhurji 7.Pav Bhaji 8.Dal Fry 9.Kadhi 10.Jeera Rice 11.Brown Rice	 12.Sambhar 13.Idli 14.Butter chiken 15.Chiken fry 16.Chiken Kadhi 17.Bangada fry");
+          for(let i=0;i<=23;i++)
+          {
+            if(eproductn<=3)
+            {
+              if(i==eproductn)
+              {
+                 document.write("<tr><td>IceCream</td>");
+                 document.write("<td>"+productn[i-1]+"</td>");
+                 document.write("<td>"+productp[i-1]+"</td></tr>");
+                 buyed=parseInt(productp[i-1])+parseInt(buyed);
+              }
+            }
+            else if(eproductn<=13)
+            {
+              if(i==eproductn)
+              {
+                document.write("<tr><td>Veg</td>");
+                document.write("<td>"+productn[i-1]+"</td>");
+                document.write("<td>"+productp[i-1]+"</td></tr>");
+                buyed=parseInt(productp[i-1])+parseInt(buyed);
+              }
+            }
+            else if(eproductn<=23)
+            {
+              if(i==eproductn)
+              {
+                document.write("<tr><td>Non-Veg</td>");
+                document.write("<td>"+productn[i-1]+"</td>");
+                document.write("<td>"+productp[i-1]+"</td></tr>");
+                buyed=parseInt(productp[i-1])+parseInt(buyed);
+              }
+            }
+         }
+        }while(j=='+');
+      document.write("<tr><th>total</th><td></td></10;i+=1)><td>"+buyed+"</td></tr>");
+     </script>
+    </table>
+    <button type="submit" onclick="javascript:window.print()" class="center1">print</button>
+   </form>
+  <hr>
+    <h6 class="center2">Contact us<< Phone number
+      <a href="tel:9766148444">97661484444</a><< email
+        <a href="mailto:kiranaglawe18@gmail.com">kiranaglawe18@gmail.com</a>
+    </h6>
+</body>
+</html>
